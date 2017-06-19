@@ -30,17 +30,11 @@ function _get_email(){
   fi
 }
 
-function _install_myvimrc(){
-  cd ~
-  git clone https://github.com/arthurprogramming/myvimconfig.git
-  ln -s myvimconfig/.vimrc .vimrc
-  ln -s myvimconfig/.vim .vim
-  cd myvimconfig
-  git submodule init
-  git submodule update
+function _install_vimrc(){
+  cp includes/.vimrc ~/.vimrc
 }
 
 _link_git
 _get_name
 _get_email
-_install_myvimrc
+_install_vimrc
