@@ -1,3 +1,11 @@
+[user]
+    name = Daniel Costa
+    email = danielcosta@gmail.com
+    signingkey = 17570EC30658AE6013A37B8054D4EA7199D33D53
+
+[commit]
+    gpgsign = true
+
 [hub]
     protocol = https
 
