@@ -1,5 +1,9 @@
 # dotfiles
 
+## Usage
+
+You can clone this repository to a directory named .dotfiles on your home folder, or elsewhere and create a symlink for it on `~/.dotfiles`
+
 ## References
 
 ### powerline

@@ -8,25 +8,25 @@ function _link_git(){
   git config --global core.excludesfile ${DOTFILES_PATH}/.gitignore
 }
 
-function _get_name(){
+function _get_git_name(){
   echo "Please input global git author's name:"
   read name
 
   if [ ! -z "$name" ]; then
     git config --global user.name "${name}"
   else
-    _get_name
+    _get_git_name
   fi
 }
 
-function _get_email(){
+function _get_git_email(){
   echo "Please input global git author's e-mail:"
   read email
 
   if [ ! -z "$email" ]; then
     git config --global user.email "${email}"
   else
-    _get_email
+    _get_git_email
   fi
 }
 
@@ -50,8 +50,8 @@ function _finish(){
 }
 
 _link_git
-_get_name
-_get_email
+_get_git_name
+_get_git_email
 _install_vimrc
 _install_tmux_conf
 _install_bashrc
