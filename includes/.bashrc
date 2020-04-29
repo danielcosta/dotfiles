@@ -11,3 +11,7 @@ if command -v bat>/dev/null; then
     alias cat='bat'
 fi
 
+if command -v kubectl>/dev/null; then
+    source <(kubectl completion bash)
+fi
+
