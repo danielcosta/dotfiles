@@ -47,7 +47,7 @@ function _install_bashrc(){
 
 function _install_apps(){
   sudo apt update && sudo apt upgrade -y
-  sudo apt install -y vim git tmux powerline fonts-powerline thunderbird docker-compose openjdk-11-jre-headless ca-certificates-java java-common
+  sudo apt install -y curl vim git tmux powerline fonts-powerline thunderbird docker-compose openjdk-11-jre-headless ca-certificates-java java-common libatomic1
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   sudo apt install -y docker-ce docker-ce-cli containerd.io
