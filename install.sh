@@ -53,12 +53,17 @@ function _install_apps(){
   sudo apt install -y docker-ce docker-ce-cli containerd.io
   sudo usermod -aG docker $USER
   sudo systemctl enable docker
+  sudo apt install golang-docker-credential-helpers
   curl -L -o /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i /tmp/chrome.deb && rm /tmp/chrome.deb
   curl -L -o /tmp/code.deb "https://go.microsoft.com/fwlink/?LinkID=760868" && sudo dpkg -i /tmp/code.deb && rm /tmp/code.deb
   curl -L -o /tmp/skype.deb https://go.skype.com/skypeforlinux-64.deb && sudo dpkg -i /tmp/skype.deb && rm /tmp/skype.dev
   curl -L -o /tmp/dbeaver.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb && sudo dpkg -i /tmp/dbeaver.deb && rm /tmp/dbeaver.deb
   sudo snap install authy --beta
   sudo snap install postman
+}
+
+function _settings(){
+  gsettings set org.gnome.desktop.interface clock-show-seconds true
 }
 
 function _finish(){
@@ -72,4 +77,5 @@ _get_git_email
 _install_vimrc
 _install_tmux_conf
 _install_bashrc
+_settings
 _finish
